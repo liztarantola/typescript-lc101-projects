@@ -1,10 +1,12 @@
-import { Payload } from './Payload.ts';
+import { Payload } from './Payload';
 
-export class Astronaut {
+export class Astronaut implements Payload {
+    massKg: number;
     name: string;
-    constructor()
+    constructor(massKg: number, name: string) {
+        this.massKg = massKg;
+        this.name = name;
+    }
 }
-function astronautName (astronaut: Astronaut): string {
-    return astronaut.name;
-}
+
 
